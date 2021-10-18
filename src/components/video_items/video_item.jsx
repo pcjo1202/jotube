@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './video_items.module.css';
 
 const Videoitem = props => {
+  const onClickVideo = () => {
+    props.playvideo(props.video.id);
+  };
+
   return (
-    <li className="videoItem">
-      <a href="#" className="item_thumbnail">
-        <img src={props.video.snippet.thumbnails.medium.url} alt="" />
-      </a>
-      <div className="video-info">
-        <a href="" className="channel-icon">
-          <img src="" alt="😃" />
-        </a>
-        <h3 className="item_title">
-          {props.video.snippet.title}
-        </h3>
+    <li className={styles.videoItem} onClick={event => onClickVideo(event)}>
+      <img
+        className={styles.item_thumbnail}
+        src={props.video.snippet.thumbnails.medium.url}
+        alt=""
+      />
+      <div className={styles.videoInfo}>
+        <img
+          className={styles.channelIcon}
+          // src={}
+          alt=""
+        />
+        <div className={styles.InfoText}>
+          <h3 className={styles.videoTitle}>
+            {props.video.snippet.title}
+          </h3>
+          <p className={styles.channelTitle}>
+            {props.video.snippet.channelTitle}
+          </p>
+        </div>
       </div>
     </li>
   );

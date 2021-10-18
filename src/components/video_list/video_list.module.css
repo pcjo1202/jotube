@@ -1,0 +1,12 @@
+.videoList {
+  flex-basis: auto;
+  /* max-width: 1500px; */
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none; */
+}

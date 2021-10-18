@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import styles from './topbar.module.css';
 
 const Topbar = props => {
   const formRef = useRef();
@@ -8,30 +9,29 @@ const Topbar = props => {
     event.preventDefault();
     const value = inputRef.current.value;
     formRef.current.reset();
+    props.onSubmit(value);
   }
 
   return (
-    <div className="topbar-wrapper">
-      <div className="logo-wrapper">
-        <div className="logo">
-          <a href="../public/index.html" className="logo-icon">
-            <i className="fab fa-youtube" />
-          </a>
-          <span className="title">Jotube</span>
-        </div>
+    <header>
+      <div className={styles.logoWrapper}>
+        <a href="http://localhost:3000/">
+          <img className={styles.logoIcon} src="/image/logo.png" alt="" />
+          <p className={styles.title}>Jotube</p>
+        </a>
       </div>
       <form
-        className="searchBox"
+        className={styles.searchBox}
         ref={formRef}
         onSubmit={event => handleValue(event)}
       >
         <input ref={inputRef} type="text" placeholder="Search..." />
-        <button className="search-icon">
-          <i class="fas fa-search" />
+        <button className={styles.searchIcon}>
+          <i className="fas fa-search" />
         </button>
       </form>
-      <button className="loginBox">로그인</button>
-    </div>
+      <button className={styles.loginBox}>로그인</button>
+    </header>
   );
 };
 

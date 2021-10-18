@@ -1,0 +1,52 @@
+.videoItem {
+  max-width: 300px;
+  max-height: 500px;
+  margin: 0px 0rem 0 0.8rem;
+  box-shadow: 1px 3px 8px 1px rgb(104, 104, 104);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 120ms ease;
+  position: relative;
+}
+
+.videoItem:hover {
+  transform: scale(1.02);
+}
+
+.item_thumbnail {
+  width: 300px;
+}
+
+.videoInfo {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.channelIcon {
+  width: 50px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.InfoText {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.videoTitle {
+  font-size: 0.95rem;
+  margin: 0 0 4px 0;
+}
+
+.channelTitle {
+  font-size: 0.8rem;
+  color: rgb(104, 104, 104);
+  margin-top: 0.3rem;
+}
