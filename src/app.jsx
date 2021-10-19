@@ -12,7 +12,7 @@ function App ({ youtube }) {
     youtube
       .mostPopular() //
       .then(items => setVideos(items))
-  }, [])
+  })
 
   function handleSearch (value) {
     youtube

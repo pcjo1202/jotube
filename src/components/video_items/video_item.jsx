@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import styles from './video_items.module.css';
+import React from 'react'
+import styles from './video_items.module.css'
 
 const Videoitem = props => {
   const onClickVideo = () => {
-    props.playvideo(props.video.id);
-  };
+    props.playvideo(props.video.id)
+  }
 
   return (
     <li className={styles.videoItem} onClick={event => onClickVideo(event)}>
       <img
         className={styles.item_thumbnail}
         src={props.video.snippet.thumbnails.medium.url}
-        alt=""
+        alt=''
       />
       <div className={styles.videoInfo}>
         <img
           className={styles.channelIcon}
           // src={}
-          alt=""
+          alt=''
         />
         <div className={styles.InfoText}>
           <h3 className={styles.videoTitle}>
@@ -29,7 +29,7 @@ const Videoitem = props => {
         </div>
       </div>
     </li>
-  );
-};
+  )
+}
 
-export default Videoitem;
+export default Videoitem
