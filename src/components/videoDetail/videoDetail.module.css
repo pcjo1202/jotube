@@ -1,0 +1,17 @@
+.videoPlayer {
+  padding: 0.5rem;
+  margin-top: 5rem;
+  flex-basis: 60%;
+  /* background-color: aquamarine; */
+}
+
+.player {
+  width: 900px;
+  height: 500px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem;
+}

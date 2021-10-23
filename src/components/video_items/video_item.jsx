@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './video_items.module.css'
 
-const Videoitem = props => {
+const Videoitem = ({ video, playvideo }) => {
   const onClickVideo = () => {
-    props.playvideo(props.video.id)
+    playvideo(video)
   }
 
   return (
     <li className={styles.videoItem} onClick={event => onClickVideo(event)}>
       <img
         className={styles.item_thumbnail}
-        src={props.video.snippet.thumbnails.medium.url}
+        src={video.snippet.thumbnails.medium.url}
         alt=''
       />
       <div className={styles.videoInfo}>
@@ -21,10 +21,10 @@ const Videoitem = props => {
         />
         <div className={styles.InfoText}>
           <h3 className={styles.videoTitle}>
-            {props.video.snippet.title}
+            {video.snippet.title}
           </h3>
           <p className={styles.channelTitle}>
-            {props.video.snippet.channelTitle}
+            {video.snippet.channelTitle}
           </p>
         </div>
       </div>
