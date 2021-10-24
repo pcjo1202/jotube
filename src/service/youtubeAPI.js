@@ -34,6 +34,7 @@ class Youtube {
       );
       const result_1 = await response.json();
       const items = result_1.items.map(item => ({ ...item, id: item.id.videoId }));
+      
       return items;
     } catch (error) {
       return console.log('error', error);

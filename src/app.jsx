@@ -8,11 +8,15 @@ import Videolist from './components/video_list/video_list'
 function App ({ youtube }) {
   const [videos, setVideos] = useState([])
   const [playVideoData, setPlayVideoData] = useState(null)
-  useEffect(() => {
-    youtube
-      .mostPopular() //
-      .then(items => setVideos(items))
-  })
+
+  useEffect(
+    () => {
+      youtube
+        .mostPopular() //
+        .then(items => setVideos(items))
+    },
+    [youtube]
+  )
 
   function handleSearch (value) {
     youtube

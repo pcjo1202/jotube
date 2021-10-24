@@ -11,7 +11,7 @@ const VideoDetail = ({ video }) => {
         height='360'
         id='ytplayer'
         src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-        frameborder='0'
+        frameBorder='0'
       />
       <div className={styles.textInfo}>
         <h3 className={styles.title}>
